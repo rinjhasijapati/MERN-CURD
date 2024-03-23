@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function CreateUser() {
   return (
-    <div>CreateUser</div>
+    <div>CreateUserr</div>
   )
 }
 

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function UpdateUser() {
   return (
-    <div>UpdateUser</div>
+    <div>UpdateUserr</div>
   )
 }
 
