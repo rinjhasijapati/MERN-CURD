@@ -2,11 +2,17 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 function UpdateUser() {
-  const {id} = useParams()
+  const { id } = useParams()
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [age, setAge] = useState();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    axios.get('/http://localhost:3001/getUser'+id)
+      .then(result => console.log(result))
+      .catch(err => console.log(err))
+  }, [])
 
   return (
     <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
