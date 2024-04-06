@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 function UpdateUser() {
   const { id } = useParams()
@@ -9,7 +11,7 @@ function UpdateUser() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('/http://localhost:3001/getUser'+id)
+    axios.get('/http://localhost:3001/getUser/'+id)
       .then(result => console.log(result))
       .catch(err => console.log(err))
   }, [])
