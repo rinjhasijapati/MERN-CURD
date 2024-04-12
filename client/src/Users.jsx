@@ -12,8 +12,9 @@ function Users() {
   }, [])
 
   const handleDelete = (id) => {
-    axios.delete('/deleteUser/'+id)
-    .then(res => console.log(res))
+    axios.delete('/http://localhost:3001/deleteUser/'+id)
+    .then(res => {console.log(res)
+      window.location.reload()})
     .catch(err => console.log(err))
   }
 
